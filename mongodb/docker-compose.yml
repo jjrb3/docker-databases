@@ -1,0 +1,34 @@
+# MongoDB container.
+#
+# To execute this file you need:
+#
+# 1. Download docker and install in your PC. You can see this URL.volumes:
+#    https://docs.docker.com/engine/install/
+# 2. Enter the directory where this file is located and execute:
+#    docker-composer up or docker-composer up -d "If you want to enable the daemon".
+# 3. You can click in this route http://localhost:27017 and check if the MongoDB server is enabled.
+#    You van see the following message:
+#    "It looks like you are trying to access MongoDB over HTTP on the native driver port."
+#
+# The data connection to the server are:
+#
+# server: localhost
+# port: 27017
+# user: root "You can change this in the {MONGO_INITDB_ROOT_USERNAME} environment"
+# pass: 123 "You can change this in the {MONGO_INITDB_ROOT_PASSWORD} environment"
+#
+# NOTE. If you need to add a new feature, you can edit this file.
+
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+#    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123
+    ports:
+      - "27017:27017"
