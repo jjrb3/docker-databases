@@ -14,10 +14,10 @@ In this container you can install an instance of MongoDB, for this you need to d
 ### Data connection.
 The data connection to the server are:
 
-* __server:__ localhost
-* __port:__ 27017
-* __user:__ root "You can change this in the `MONGO_INITDB_ROOT_USERNAME` environment"
-* __pass:__ 123 "You can change this in the `MONGO_INITDB_ROOT_PASSWORD` environment"
+* __Server:__ localhost
+* __Port:__ 27017
+* __User:__ root "You can change this in the `MONGO_INITDB_ROOT_USERNAME` environment"
+* __Pass:__ 123 "You can change this in the `MONGO_INITDB_ROOT_PASSWORD` environment"
 
  
 __NOTE__. If you need to add a new feature, you can edit the __docker-compose-yml__.
