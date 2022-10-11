@@ -1,0 +1,21 @@
+# MySQL Container.
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306" # Check problems here.
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080

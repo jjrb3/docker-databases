@@ -1,0 +1,10 @@
+# Cassandra Container.
+version: '3.1'
+
+services:
+
+  cassandra:
+    image: cassandra
+    container_name: cassandra
+    ports:
+      - "7000:7000" # Check connection
